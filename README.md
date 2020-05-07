@@ -180,3 +180,9 @@ ___
 ### Other Points
 * Assembly 6502 is closer to Human Programmin Languages (It was created for the Game Developers of Atari!) than Assembly x86 which nowadays is available.
 ___
+
+# 2. Hardware and Architecture
+## 2.1. Hardware and Specs
+## 2.2. Review of Binary and Hexadecimal
+## 2.3. The 6502 Processor
+## 2.4. Carry and Overflow Flags
