@@ -182,7 +182,91 @@ ___
 ___
 
 # 2. Hardware and Architecture
+
 ## 2.1. Hardware and Specs
+* The very first gaming devices (ca. 1972) had only one games and if you wanted a new game you should have bought a new device!
+
+* The most old video games PONG, TANK had some common elements (Remember about these elements we will talk about them later and the communication between devices for them):
+    * Player 1
+    * Player 2
+    * Scoreboard
+    * Ball / Missile
+    * Playing Field
+    * Collision / Bouncing
+
+![very first games](./images/the-very-first-games.png)
+
+* In 1975, Atari decided to release a console based on programmable design
+
+* Code name of project was Stella
+
+* 3 Processors were considered (candidated) for the Atari 2600:
+    * Intel 8080
+    
+    * Motorola 6800
+    
+    * __MOS 6502__ (bought by Commodor before release) - The winner!
+        * A lot cheaper (15$) than Intel8080 and Motorola6800 (around 120$)!
+
+### ATARI 2600
+![Picture of Atari 2600](./images/atari-2600.png)
+
+* CPU : 1.19 MHz 6507
+
+* Audio/Video : TIA Chip (Television Interface Adapter)
+
+* RAM : 128 bytes 6532 RIOT (Read Input Output Timer) Chip
+
+* ROM (game cartridges) : 4kB (So we have 4kB for writing our code in this course!)
+
+* Input : Two controller ports (joystick, paddle, etc)
+
+* Output: TV via RCA Connector : There were 3 Standards available (NTSC, PAL, SECAM). NTSC for America and the PAL is the european version
+
+### Timeline of Atari 2600
+* 1977 - 2600 "HEAVY SIXER" 
+![Heavy Sixer](./images/2600-heavy-sixer.png)
+
+* 1978 - 2600 "LIGHT SIXER"
+![Light Sixer](./images/2600-light-sixer.png)
+
+* 1980 - 2600-A "FOUR-SWITCH"
+![Four Switch](./images/2600-four-switch.png)
+
+* 1981 - 2600 "DARTH VADER"
+![Darth Vader](./images/darth-vader.png)
+
+* 1986 - 2600 JR
+![2600 jr](./images/2600-jr.png)
+
+### Board
+![Board](./images/board.png)
+
+![Board Map](./images/board-map.png)
+
+![Board Schema](./images/board-schema.png)
+
+### Processor
+* The __6502__ powered ...
+    * Apple lle
+    * Commodore PET
+    * BBC Micro
+    * Commodore VIC-20
+    * Commodore 64
+    * Tamagotchi
+    * Atari 2600
+    * Bender Rodrigues
+
+![6502 pinout](./images/6502-pinout.png)
+
+### 6507 Processor
+* 6507 is essentially a 6502 in a cheaper 28-pin package.
+* A15 to A13 and other interruption lines are not accessible (to make it cheaper)
+
+### TIA PAL and NTSC
+![TIA Boards](./images/TIA.png)
+___
+
 ## 2.2. Review of Binary and Hexadecimal
 ## 2.3. The 6502 Processor
 ## 2.4. Carry and Overflow Flags
