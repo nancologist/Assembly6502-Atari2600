@@ -561,3 +561,16 @@ So this is basically why I wanted to tell you how negative numbers worked becaus
 ___
 ___
 ___
+
+# 3. 6502 Assembly Programming
+## 3.1. The Assembler Flow
+## 3.2. Assembly Language(s)?
+## 3.3. Popular 6502 Assembly Instructions
+## 3.4. Installation and Tools
+## 3.5. Picking a Code Editor
+## 3.6. Our First Assembly Code
+## 3.7. The DASM Assembler
+## 3.8. The Stella Emulator
+## 3.9. Installing DASM on Windows
+## 3.10. The Javatari Emulator
+## 3.11. Our First Assembly Bug
