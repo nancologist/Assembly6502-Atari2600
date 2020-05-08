@@ -268,5 +268,51 @@ ___
 ___
 
 ## 2.2. Review of Binary and Hexadecimal
+### Human and Decimals
+We humans use the decimal system, that means we use 10 digits to represent the numbers (0 to 9), for example the Number 12 means that we have 1 x 10^1 and 2 x 10^0 or 348 means we have 3 x 10^2 , 4 x 10^1 and 8 x 10^0
+
+_SO WE HUMANS COUNT IN "BASE OF 10"!_
+
+### Computers Count in Base 2
+Just like our way but computers does not have 0 to 9 digits to represent numbers! they have only 0 and 1 to present numbers! So for example 11 (in Base 2) means we have 1 x 2^1 and 1 x 2^0 which is in our Decimal System (Human system) 3.  
+Or for example 1011 in Base 2 is 11 in Base 10.
+
+In a binary number the most right number is called __LSB__ (Least Significant Bit) and the most left one is called __MSB__ (Most Significant Bit)
+
+### Other Bases & Hexadecimal
+There is also several other bases like Base-12 and sometimes programmes use Base-8 , but one of the most important bases for programmers is __Base-16__
+
+In __Base-16__ again we use 0-9 to represent the first 10 numbers and then for the next 6 Numbers 11th (10 in our system) to 15th (16 in our system) we use A-F.
+
+So for example 12 in Base16 means 1 x 16^1 + 1 x 16^0 = 17 (in Base 10 , our system).
+
+### Convert from Binary (base2) to Hexadecimal (base16):
+00011011 (27 in base10) , imagine this binary number we do the following steps to convert this to a hexadecimal:
+
+1. separate these number with 4 digits : 0001 1011
+
+2. Convert these two groups to Decimal number:
+    * 0001 is 1 (base10)
+    * 1011 is 11 (base10)
+
+3. Convert from decimal to hexadecimal:
+    * 1 is 1 (base16)
+    * 11 is B (base16)
+
+4. So the 00011011 is __1B__ (base16) , 1 x 16^1 + B x 16^0 = 27 (base10)
+
+### Hexadecimal in Memory
+![hexadecimals](./images/hexadecimal.png)
+
+One of the advantages of using hexadecimals is that we can represent a larger number in a shorter representation bzw. less digits. (for example "ee" is 15 x 16^1 + 15 x 16^0 = 255 (base10))
+
+### Conventions in this course
+* ``#2`` : The Hash tag, this means the literal 2, also in Base10 (decimals)
+
+* ``$2F`` : This dollar sign we use for hexadecimals (base16) , 2F is btw #47
+
+* ``%00101100`` : And we are going to use % sign to represent binaries and their bits.
+___
+
 ## 2.3. The 6502 Processor
 ## 2.4. Carry and Overflow Flags
