@@ -478,7 +478,8 @@ So he has eight bits holding things as the:
 So we are speaking about identifying certain status from the processor. But I think it's important to understand really what ``Carry`` is and what ``Overflow`` is. And that kind of links to the idea of understanding how we store negative numbers in computer.
 
 ### Carry Flag
-IMAGE - 3:18
+
+![Carry Flag](./images/carry-flag.png)
 
 Let's talk about the ``Carry`` flag. Remember that we spoke about binary numbers.  
 So whenever we have the ``ALU`` you processing things most of the time you're going to say: _"ALU processor add two numbers together!"_.  
@@ -492,7 +493,7 @@ ___
 ### Negative Numbers 
 #### Sign & Magnitude - Approach-1
 
-IMAGE - 5:44
+![Sign & Magnitude](./images/sign-and-magnitude-method.png)
 
 We want to talk about is how do numbers how the computer is represent negative numbers.  
 
@@ -516,7 +517,7 @@ ___
 
 #### Two's Complement
 
-IMAGE - 8:21
+![Two's Complement Explained](./images/twos-complement-explained.png)
 
 So what we do is we come up we came up with a smarter way of representing negative numbers. What we use is what we call Two's Complement. And this is kind of the most popular way that computers store negative numbers today. And also this is the way that the Atari processor stores and handles negative numbers. what we do is remember how we have the binary numbers like a normal binary. We have these columns where represents 2 to the 0 2 to the one true to the two cubed 2 to the fourth. So we have ones twos force eight takes things thirty two sixty four and 128. This was the normal kind of vanilla way that we thought our or our normal binaries or sometimes called ``Unsigned (Normal) Binary`` right.
 
@@ -531,7 +532,7 @@ There is only ONE WAY of representing zero (the Problem of the ``Sign & Magnitud
 And also if we look at the arithmetic way with two's Complement simpler it may just kind of just works out of the box, if you add two numbers the result is most most likely correct or what we have to do with 
 ___
 
-IMAGE
+![Two's Complement Examples](./images/twos-complement-examples.png)
 
 I just want to show again a couple of examples. 
 
@@ -541,60 +542,22 @@ The First Example here would be +127, because I add all the bits until all the b
 The Second Example is -128 because I activate my leftmost column saying that I have one -128 and then everything else is zero. So this is the the lower part of the range that I can represent right. - 128.
 
 
-The Third Example. What if I have all 1s. Well in this case I say I have full -128. But I also have +64 , +32 , +16 , +8 , +4 , +2 and +1 . 
+The Third Example. What if I have all 1s. Well in this case I say I have full -128. But I also have +64 , +32 , +16 , +8 , +4 , +2 and +1 so I would get minus one. So this is kind of a smart way of identifying and representing it is logical two's complement 
 
-four plus two plus one I would get minus one and if I kind of work around with the zeros here between
+### Two's Complement Overflow
+And we have a situation where we can have what we call an ``Overflow``. This would a process recall an ``Overflow`` in the sine bit again the same situation.
 
-these these values I will get minus one minus two mainstream and as for and etc. So this is kind of
+![Stack Overflow!!!](./images/stack-overflow-understood.png)
 
-a smart way of identifying and representing it is logical to complement
+Let's say that I'm adding Well 0 1 1 1 1 1 1 1 plus 1 these two numbers together the same thing will happen. We have one plus one that will get us to 2 is 10. So we write the zero on the right and we CARRY the one to the next bit one plus one will give us two again. Right ``Carry`` 1 one plus one to again carry 1 one plus 1 again carry one one plus one to carry one one plus one to carry one. 
 
-and we have a situation where we can have what we call an ``Overflow``.
+And then on that specific LAST one plus one will be two, carry one and on the left bit on the left most beat is one point plus 0 one we do not have to carry anything we are still working with only 8 bits we didn't have to kind of carry on to the next to the next it is still a normal byte, normal calculation it looks OK. 
 
-This would a process recall an ``Overflow`` in the sine bit again the same situation.
+We didn't have to carry any bit extra everything looks OK but if we're talking about to complement we have a bug because this means that +127 (decimal) plus 1 (decimal) will give us what, remember to call them that we haven't left is -128, that gave us minus 128. 
 
-Let's say that I'm adding Well 0 1 1 1 1 1 1 1 plus 1 these two numbers together the same thing will
+In this case whenever this happens whenever we change the status of the leftmost bit from zero to one and vice versa the processor will set what we called the ``Overflow flag`` so we if we are ever programming or games or programming or applications and we're adding two numbers right we have two sprites on the screen with the players and the positions like we had we added the two positions and it becomes from 2 positive to a negative we can check the processor status flag for ``Overflow`` and we will be set and then we can take the action that we need to take and kind of work around.
 
-happen.
-
-We have one plus one that will get us to 2 is 1 0.
-
-So we write the zero on the right and we carry the one to the next bit one plus one will give us two
-
-again.
-
-Right ``Carry`` 1 one plus one to again carry 1 one plus 1 again carry one one plus one to carry one one
-
-plus one to carry one and then on that specific one plus one will be to carry one and on the left beat
-
-on the left most beat is one point plus zero one we do not have to carry anything we are still working
-
-with only 8 bits we didn't have to kind of carry on to the next to the next it is still a normal byte
-
-normal calculation it looks OK right we didn't have to carry any bit extra everything looks OK but if
-
-we're talking about to complement we have a bug because this means that 127 and twenty seven
-
-positive plus one in Destin all right 127 twenty seven in decimal plus one in decimal Ed will
-
-give us what remember to call them that we haven't left is minus 127 twenty eight that gave
-
-us minus 128 in this case whenever this happens whenever we change the status of the leftmost bit from
-
-zero to one and vice versa the processor will set what we called the ``Overflow`` flag so we if we are ever
-
-programming or games or programming or applications and we're adding two numbers right we have two sprites
-
-on the screen with the players and the positions like we had we added the two positions and it becomes
-
-from 2 positive to a negative we can check the processor status flag for ``Overflow`` and we will be set
-
-and then we can take the action that we need to take and kind of work around.
-
-So this is basically why I wanted to tell you how negative numbers worked because these two flags the
-
-carry flag and the overfull flag they will be important for a threat notify some issues that might happen
-
-whenever we're talking about the arithmetic of the numbers.
-
-So by looking at the processor status flag we can kind of take action and go from there.
+So this is basically why I wanted to tell you how negative numbers worked because these two flags the ``carry`` flag and the ``overflow`` flag will be important for us to identify issues that might happen whenever we're talking about the arithmetic of the numbers. So by looking at the processor status flag we can kind of take action and go from there.
+___
+___
+___
