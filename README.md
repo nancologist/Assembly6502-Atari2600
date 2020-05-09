@@ -563,7 +563,20 @@ ___
 ___
 
 # 3. 6502 Assembly Programming
+
 ## 3.1. The Assembler Flow
+https://www.udemy.com/course/programming-games-for-the-atari-2600/learn/lecture/13486008#content
+
+![Assembler](./images/assembler01.png)
+
+* Assembler is something like a Compiler , it translates for example ``LDA #2`` (Load 2 (base10) into the Register A) into the MACHINE CODE: 1010 1001 0000 0010  (``A9 02``)
+
+* MOS 6502 is a ``little endian`` processor (it first store the small part and then big parte)
+
+![Assembler02](./images/assembler02.png)
+
+___
+
 ## 3.2. Assembly Language(s)?
 ## 3.3. Popular 6502 Assembly Instructions
 ## 3.4. Installation and Tools
