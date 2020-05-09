@@ -667,16 +667,54 @@ ___
 
 * ... other explanations in comments in code
 
-* ``#$FF`` : This means the literal-value(base 10) of hexadecimal FF which is (1111 1111 which is 16x16+16x1 in decimal system )
+* ``#$FF`` : This means the literal-value(base 10) of hexadecimal FF which is (1111 1111 which is ``15x16^1 + 15x16^0`` in decimal system ).
+
+    Instead of ``#$FF`` we could have written ``#255``
 
 * Mori: LINE9 reg => register
 
 * ``TXS`` - LINE 10 : We are initiating the Stack Pointer register with the value $FF (which comes from X register)
 
+* ``STA $0,X`` : Store the value of A-reg (which is now zero because of LINE-17) in the position ``$0 + X (which is FF because of LINE-18)`` , so it means ``STA $0+$FF``
+
+* ``DEX`` : Decrementing X helps us to if there's a chance that a flag goes up because of this incrementing , for example the flags like (``Z-flag`` if the X-reg value is going to be zero) or (``N-flag`` if the X-reg value is going to be negative) , THESE ARE GOING TO BE OUR CONDITIONS! SO FOR EXAMPLE IF THE Z-FLAG IS REACHED WE WANT TO STOP THE LOOP.
+
+* ``BNE`` : While X-reg value ``Branch`` is ``Not Equal`` zero , I want to back to ``MemLoop`` !
+
+___
+
+### Part 2
+
+* __Goal:__  
+    Now the goal is here to loop the X-reg down to the zero and so when we reach zero we are going to use ``BNE`` (Branch Not Equal Zero) , So if X-reg is going to be zero, we 
+
+___
+
+### Closing The Code (Cartridge)
+
+First we need to close our code. But there is also a rule for Atari:  
+
+_YOU SHOULD ALWAYS FILL ALL THE 4 KILO BYTES CAPACITY OF ROM (CARTRIDGE)_
+
+on
+
+* __LINE-29 ``ORG $FFFC``__  
+    For 4KB we should go to $FFFF, but why here we go to the $FFFC ?
+
+    Because we need to complete the ROM cartridge to $FFFF (4KB). But before we go to $FFFF , ATARI REQUIRES US TO GO TO ``$FFFC`` AND ADD 4 BYTES THERE.
+
+    For this 4 Bytes we need to put Address of the memory position that I should go ($FFFC), WHENEVER THE ATARI SYSTEM IS RESET!!!
+    
+* __LINE-30 ``.word Start``__  
+    We went in the last line to $FFFC and whenever we command ``.word``, this is the instruction which tells the Assembler to _"ADD 2 BYTES FOR ME!"_
 ___
 
 ## 3.7. The DASM Assembler
+
 ## 3.8. The Stella Emulator
+
 ## 3.9. Installing DASM on Windows
+
 ## 3.10. The Javatari Emulator
+
 ## 3.11. Our First Assembly Bug
