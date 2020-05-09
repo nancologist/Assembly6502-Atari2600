@@ -735,8 +735,25 @@ Now we need a translator (ASSEMBLER) which translates our Code to Binary for a 6
 ___
 
 ## 3.8. The Stella Emulator
+https://stella-emu.github.io/
+
+* Go to above link > "Stable Releases"
+
+* We should run the Stella.app (MacOS) and then go to our project directory
+
+* Run the ``cart.bin``
+
+* Now you should see a black screen on your Stella.app .  
+    And that is ok, because we did not write a code that displays something on the screen, we just wanted to Clean the memory in the cart.bin
+
+* To see what is going on when we run ``cart.bin`` , we can use the DEBUGGER of Stella.app (On MacOS press ^ to enter the Debug mode!)
+
+    Look at the following video from 08:02 to learn how to debug with Stella
+    https://www.udemy.com/course/programming-games-for-the-atari-2600/learn/lecture/13558818#questions/6953092
+___
 
 ## 3.9. Installing DASM on Windows
+___
 
 ## 3.10. The Javatari Emulator
 
