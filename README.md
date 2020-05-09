@@ -631,6 +631,21 @@ Loop:
 ___
 
 ## 3.4. Installation and Tools
+
+In the next few lectures, we will learn how to download and install the tools needed to assemble our 6502 assembly code and run it using a popular Atari 2600 emulator.
+
+The two main programs we will use are:
+
+* DASM assembler
+
+* Stella Atari emulator
+
+Both these options can be downloaded and installed on Windows, macOS, and Linux operating systems.
+
+You will see that I will be using a Linux machine during the lectures, and in the next few videos, I will code our first assembly code using my Linux environment.
+
+If you are a Windows user: I will explain very soon how to install the DASM assembler and the Stella emulator on a Windows 10 machine. But as a suggestion, please watch the next videos where I explain how to assemble and debug our code using Linux, since these lectures explain very important concepts that will be useful for everyone, regardless of the OS being used.
+___
 ## 3.5. Picking a Code Editor
 ## 3.6. Our First Assembly Code
 ## 3.7. The DASM Assembler
