@@ -646,8 +646,35 @@ You will see that I will be using a Linux machine during the lectures, and in th
 
 If you are a Windows user: I will explain very soon how to install the DASM assembler and the Stella emulator on a Windows 10 machine. But as a suggestion, please watch the next videos where I explain how to assemble and debug our code using Linux, since these lectures explain very important concepts that will be useful for everyone, regardless of the OS being used.
 ___
+
 ## 3.5. Picking a Code Editor
+
 ## 3.6. Our First Assembly Code
+
+### Part 1
+
+* ``cleanmemory/cleanmem.asm`` : Here we want to clean up the memory from ``00`` to ``FF``
+
+### LINES Explanation
+
+* ``processor 6502`` : This indicates which processor is our target.
+
+* ``seg code`` : Segment of Code.
+
+* ``org $F000`` : origin of our code. With this we specify where the code starts. It should be always at $F000 in the memory
+
+* ``Start:`` : This is a label. This is the first line of code which is going to be saved in $F000 . If we need to come back to start we will point to this label ``Start:``
+
+* ... other explanations in comments in code
+
+* ``#$FF`` : This means the literal-value(base 10) of hexadecimal FF which is (1111 1111 which is 16x16+16x1 in decimal system )
+
+* Mori: LINE9 reg => register
+
+* ``TXS`` - LINE 10 : We are initiating the Stack Pointer register with the value $FF (which comes from X register)
+
+___
+
 ## 3.7. The DASM Assembler
 ## 3.8. The Stella Emulator
 ## 3.9. Installing DASM on Windows
