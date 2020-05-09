@@ -578,7 +578,58 @@ https://www.udemy.com/course/programming-games-for-the-atari-2600/learn/lecture/
 ___
 
 ## 3.2. Assembly Language(s)?
+___
+
 ## 3.3. Popular 6502 Assembly Instructions
+https://www.udemy.com/course/programming-games-for-the-atari-2600/learn/lecture/13557952#content
+
+![instruction](./images/assembly6502-instruction.png)
+
+
+___
+
+* LD -> Load : "Load a value to a register" (LDA, LDX, LDY)
+* ST -> Store : "Store value from register to a memory" (STA, STX, STY)
+
+* Arithmetic Instructions are ONLY these two:
+    * ``ADC`` : Add to accumulator (with carry)
+    * ``SBC`` : Subtract from the Accumulator (with carry)
+
+* the MOS 6502 has two arithmetic modes, ``binary`` and ``decimal`` (BCD). Both addition and subtraction implement carry flag.
+
+* ``CLC`` : Clears the carry flag, usually performed before adding
+
+* ``SEC`` : Sets the carry flag, usually performed before subtraction
+
+* ``INC`` : Increment memory by one.
+
+* ``INCX`` : Increment X by one
+
+* ``INCY`` : Increment Y by one
+
+* ``DEC`` : Decrement memory by one.
+
+* ``DECX`` : Decrement X by one
+
+* ``DECY`` : Decrement Y by one
+
+___
+
+* ``JMP`` : Jump to another location "Go to!" , for example in a for-loop
+
+* BCC , BCS , BEQ , BNE , MI , BPL , BMI , BPL , BVC , BVC
+
+### Code Example
+```
+    LDY #100    ;Y=100
+Loop:
+    DEY         ;Y--
+    BNE LOOP    ; repeat until y==0
+```
+
+
+___
+
 ## 3.4. Installation and Tools
 ## 3.5. Picking a Code Editor
 ## 3.6. Our First Assembly Code
