@@ -710,6 +710,29 @@ on
 ___
 
 ## 3.7. The DASM Assembler
+https://dasm-assembler.github.io/
+
+Now we need a translator (ASSEMBLER) which translates our Code to Binary for a 6502-PROCESSOR.
+
+* ``sudo cp dasm /usr/local/bin`` : Having the DASM-assembler in /usr/local/bin/ allows us to use it when we use Terminal
+
+* Now if we type ``dasm`` in Terminal , the Unix system recognize it!
+
+* ``dasm cleanmem.asm -f3 -v0 -oFILENAME.bin`` : It runs our code for Assembly6502 (MOS 6502) 
+    * and ``-f3`` sets the special header and syntax to read the file for 6502-processor. 
+    
+    * And ``-v0`` is to set the DEBUG level to only ERRORS, so when the code runs, we will only see the Errors.
+
+    * ``-o`` : This is the output filename and location for the Machine Code (binary) after the translation which is the main task of ``DASM``
+
+    * ``chmode 755 cart.bin`` (just to show it's not possible) : To give the Executable-permission to the cart.bin 
+
+        Now if we command ``./cart.bin`` , the error comes "It's not executable" , the reason is that we are trying to run binary code inside cart.bin which is created exclusively for the ``MOS-6502`` on our machine/laptop, which has a INTEL-PROCESSOR.
+
+        So every processor has it's own machine codes (they look all like 0111001011110011 but they won't work cross-platform!)
+
+        SO WE NEED AN EMULATOR WHICH FAKES THE CPU-6502 FOR OUR MACHINE CODE IN THE ``cart.bin`` ...
+___
 
 ## 3.8. The Stella Emulator
 

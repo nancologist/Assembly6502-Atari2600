@@ -19,7 +19,7 @@ Start:
 MemLoop:
     STA $0,X        ; store A-reg val (0 <- LINE-17) at address ($0 + X ($FF <- LINE-18) ) 
     DEX             ; Decrement X-reg val by one (X--)
-    BNE             ; loop until X == 0 (z-flag set to 1)
+    BNE MemLoop             ; loop until X == 0 (z-flag set to 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Fill ROM size to exactly 4KB
