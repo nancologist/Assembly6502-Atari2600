@@ -827,6 +827,10 @@ Here we have these two files: https://github.com/munsie/dasm/tree/master/machine
 ___
 
 ## 4.2. Memory Map and Page Zero
+
+![pic](./images/ch4-part2.png)
+___
+
 ## 4.3. Sending Instructions to the Display
 ## 4.4. NTSC Video Synchronization
 ## 4.5. Painting the CRT
