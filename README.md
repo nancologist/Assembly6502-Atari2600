@@ -836,6 +836,19 @@ ___
 * ``ds 1`` : This DEFINES the SPACE of 1 byte.
 
 ### Set the Background Color
+* To set the color we can go to wikipedia page "List of Video Game Console Palettes" and we want to work with NTSC (american version) :
+
+    ![pic](./images/atari-2600-ntsc-colors.png)
+
+REMEMBER: _Atari always starts at the $FFFC of ROM !!!_
+
+1. To make our file easier we are going to create a file ``Makefile`` (without any extension! and it should be called exactly "Makefile"!!!)  with the commands we need
+
+2. Now we can use the command ``make`` this runs the "$ make all" for us and it compiles our code in ``colorbg.asm`` into machine code with the filename ``cart.bin``
+
+ERROR: But now if your run this cart.bin with Stella you see scrolling white colors on BG! for that we should: ``Options > Game Properties > Emulation > TV Format > NTCS``
+
+TEST: Now if we first remove the ``CLEAN_START`` and then run ``make``again and then use this new cart.bin file into the Stella, we see a whole Yellow Screen
 ___
 
 ## 4.4. NTSC Video Synchronization
