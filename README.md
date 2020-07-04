@@ -581,7 +581,7 @@ ___
 ___
 
 ## 3.3. Popular 6502 Assembly Instructions
-https://www.udemy.com/course/programming-games-for-the-atari-2600/learn/lecture/13557952#content
+http://www.6502.org/tutorials/6502opcodes.html
 
 ![instruction](./images/assembly6502-instruction.png)
 
@@ -603,15 +603,15 @@ ___
 
 * ``INC`` : Increment memory by one.
 
-* ``INCX`` : Increment X by one
+* ``INX`` : Increment X by one
 
-* ``INCY`` : Increment Y by one
+* ``INY`` : Increment Y by one
 
 * ``DEC`` : Decrement memory by one.
 
-* ``DECX`` : Decrement X by one
+* ``DEX`` : Decrement X by one
 
-* ``DECY`` : Decrement Y by one
+* ``DEY`` : Decrement Y by one
 
 ___
 
@@ -675,7 +675,7 @@ ___
 
 * ``TXS`` - LINE 10 : We are initiating the Stack Pointer register with the value $FF (which comes from X register)
 
-* ``STA $0,X`` : Store the value of A-reg (which is now zero because of LINE-17) in the position ``$0 + X (which is FF because of LINE-18)`` , so it means ``STA $0+$FF``
+* ``STA $0,X`` : Store the value of A-reg (which is now zero because of LINE-16) in the position ``$0 + X (which is FF because of LINE-18)`` , so it means ``STA $0+$FF`` (Mori: Store the integer 0 into the memory with address: $FF)
 
 * ``DEX`` : Decrementing X helps us to if there's a chance that a flag goes up because of this incrementing , for example the flags like (``Z-flag`` if the X-reg value is going to be zero) or (``N-flag`` if the X-reg value is going to be negative) , THESE ARE GOING TO BE OUR CONDITIONS! SO FOR EXAMPLE IF THE Z-FLAG IS REACHED WE WANT TO STOP THE LOOP.
 
@@ -748,7 +748,7 @@ https://stella-emu.github.io/
 
 * To see what is going on when we run ``cart.bin`` , we can use the DEBUGGER of Stella.app (On MacOS press ^ to enter the Debug mode!)
 
-    Look at the following video from 08:02 to learn how to debug with Stella
+    Look at the following video from 07:30 to learn how to debug with Stella
     https://www.udemy.com/course/programming-games-for-the-atari-2600/learn/lecture/13558818#questions/6953092
 ___
 
