@@ -832,6 +832,12 @@ ___
 ___
 
 ## 4.3. Sending Instructions to the Display
+
+* ``ds 1`` : This DEFINES the SPACE of 1 byte.
+
+### Set the Background Color
+___
+
 ## 4.4. NTSC Video Synchronization
 ## 4.5. Painting the CRT
 ___
