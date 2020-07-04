@@ -785,7 +785,47 @@ ___
 ___
 
 # 4. VCS Memory Map and the TIA
+VCS: Video Computer System (It means easily Console!)
+
 ## 4.1. VCS Memory Map
+Course Episode: https://www.udemy.com/course/programming-games-for-the-atari-2600/learn/lecture/13559294#content
+
+Memory Map is about _Where are things located in address space?_
+
+### VSC Bus
+Three important things are connected to VSC Bus:
+
+* TIA (Television Interface Adapter) : It's responsible for example for the colors of background, players etc. on screen.
+
+* PIA (Peripheral Interface Adapter) : Which is basically our RAM.
+
+* ROM (Read Only Memory) : Which is cartridge (The game cassette!)
+___
+
+### VSC Memory Map Addresses:
+* From ``$00`` to ``$7F`` : these addresses are mostly responsible for __TIA-Registers__.
+
+* From ``$80`` to ``$FF`` : these addresses are mostly responsible for __PIA-RAM__.
+
+The whole of these both addresses (from $00 to $FF) is called __Zero Page__.
+
+* And our __Cartridge ROM__  is from ``$F000`` to ``$FFFF`` : These are our Up-Code (Instruction). ``$FFFC`` is where we have our RESET factor and then we have ``$FFFE`` for Interruption.
+___
+### Do I have to remember all these addresses and their functionalities?
+No, we are going to use a file ``vcs.h`` which contains useful definitions of important memory space addresses. So in this file we have Nickname for Memory Addresses so it would be like this:
+
+* ``COLUP0`` for ``$06`` : Color-Luminance Player 0
+* ``COLUP1`` for ``$07`` : Color-Luminance Player 1
+* ``COLUPF`` for ``$08`` : Color-Luminance Play Field
+* ``COLUBK`` for ``$07`` : Color-Luminance Background
+
+So all we need to do is to add ``include "vcs.h`` in the beginning of our main assembly files.
+
+* We are also going to add ``macro.h`` to our code which includes some tasks like Cleaning Memory for us.
+
+Here we have these two files: https://github.com/munsie/dasm/tree/master/machines/atari2600
+___
+
 ## 4.2. Memory Map and Page Zero
 ## 4.3. Sending Instructions to the Display
 ## 4.4. NTSC Video Synchronization
