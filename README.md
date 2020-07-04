@@ -759,3 +759,5 @@ ___
 ## 3.10. The Javatari Emulator
 
 ## 3.11. Our First Assembly Bug
+Our Program has a bug.
+The bug is when our X-reg is set to 0 , which is our Memory Address $00 , it does not set its value to 0 and then code exits the loop.

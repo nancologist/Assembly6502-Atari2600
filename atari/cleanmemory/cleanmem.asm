@@ -15,10 +15,11 @@ Start:
 
     LDA #0          ; A-reg = 0
     LDX #$FF        ; X = 255
+    STA $FF         ; Make sure Memory $FF is zeroed before the loop starts.
 
 MemLoop:
-    STA $0,X        ; store A-reg val (0 <- LINE-17) at address ($0 + X ($FF <- LINE-18) ) 
     DEX             ; Decrement X-reg val by one (X--)
+    STA $0,X        ; store A-reg val (0) at address ($0 + X ($FF <- LINE-18) ) 
     BNE MemLoop             ; loop until X == 0 (z-flag set to 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
