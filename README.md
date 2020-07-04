@@ -783,3 +783,13 @@ ___
 ___
 ___
 ___
+
+# 4. VCS Memory Map and the TIA
+## 4.1. VCS Memory Map
+## 4.2. Memory Map and Page Zero
+## 4.3. Sending Instructions to the Display
+## 4.4. NTSC Video Synchronization
+## 4.5. Painting the CRT
+___
+___
+___
