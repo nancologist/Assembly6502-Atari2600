@@ -852,6 +852,17 @@ TEST: Now if we first remove the ``CLEAN_START`` and then run ``make``again and 
 ___
 
 ## 4.4. NTSC Video Synchronization
+https://www.udemy.com/course/programming-games-for-the-atari-2600/learn/lecture/19824992#questions/11411454/&utm_campaign=email&utm_source=sendgrid.com&utm_medium=email
+
+* Color Clocks are something like Pixels
+* 3 Color Clocks = 1 CPU Cycle
+* Horizontal Blank : the first 68 color clocks are blank
+* Learn more accurate using the above link
+* Also here you can see these things better:
+
+![NTSC Video Sync](./images/video-sync.png)
+___
+
 ## 4.5. Painting the CRT
 ___
 ___
