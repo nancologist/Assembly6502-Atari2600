@@ -757,7 +757,29 @@ https://www.udemy.com/course/programming-games-for-the-atari-2600/learn/lecture/
 ___
 
 ## 3.10. The Javatari Emulator
+http://8bitworkshop.com/  
+http://javatari.org/
 
 ## 3.11. Our First Assembly Bug
 Our Program has a bug.
 The bug is when our X-reg is set to 0 , which is our Memory Address $00 , it does not set its value to 0 and then code exits the loop.
+___
+
+## 3.12. Different Addressing Modes
+
+* ``LDA #80`` : As we know it means: "Load the Accumulator-reg with decimal value 80." , so after we run this command we will have the value 80 in the A-reg
+
+* ``LDA $80`` : But this command, which uses hexadecimal, does COMPLETELY something!, it means: __"Load the A-reg with the value inside memory address $80"__
+
+The first one is called IMMEDIATE MODE, and the second is called ABSOLUTE (ZERO PAGE) MODE. Meaning that we are going to get an address in the zero page of the memory and load the A-reg with the value which is inside that memory position. 
+
+We can also use these two different modes for X, Y and other registers.
+___
+
+* ``LDA #$80`` : What if we want to load the A-reg with the literal hexadecimal? So this command here will be interpreted like this: __"Load the A-reg with the literal hexadecimal $80"__ , we could have also wrote this command like this:
+
+    ``LDA #128``
+
+___
+___
+___
