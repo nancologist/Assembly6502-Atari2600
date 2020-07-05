@@ -864,6 +864,9 @@ https://www.udemy.com/course/programming-games-for-the-atari-2600/learn/lecture/
 ___
 
 ## 4.5. Painting the CRT
+Let's create a Program which changes the color of background in controlled way, for example let's create a Rainbow!!!
+
+* ``WSYNC`` : Whenever we use WSYNC, that is the way Scanline will render the colors to the screen AND THEN SENDS A RESPONSE to CPU that it is done and gives control back to us.
 ___
 ___
 ___
