@@ -870,3 +870,66 @@ Let's create a Program which changes the color of background in controlled way, 
 ___
 ___
 ___
+
+# 5. TIA Objects
+
+## 5.1. TIA Screen Objects
+Screen Objects: Like the playfield, background, tanks or missiles and the ball in atari games.  
+_"Scanline will be rendered based on how we configure the TIA's screen objects (via TIA register)"_
+
+### 5.1.1. Background
+* Takes the whole visible screen (160x192).
+* We can only change the background color per each horizontal scanline (__COLUBK__ (color luminates background)).
+* The background is always disaplayed behind all the other elements (screen objects).
+___
+
+### 5.1.2. Playfield
+* Very important Screen Object.
+* 20-bit pattern, rendered over the left side of the scanline
+* One color per horizontal scanline
+* The right side will either __repeat__ or __reflect__ the same pattern.
+* Playfield registers (PF stands for Playfield):
+    * PF0, PF1, PF2
+    * COLUPF
+    * CTRLPF 
+        * D0: Reflect (Most right bit)
+        * D1: Score
+        * D2: Priority (like z-index in CSS!)
+        * D4-D5: Ball Size (1, 2, 4, 8)
+
+#### Example of Playfield
+
+![Tanks Playfield](./images/tanks-playfield.png)
+
+For example in a tank game (in the picture above), the walls and result numbers and the whole border of the arena are parts of the Playfield.
+
+![PF Registers](./images/PF-registers.png)
+
+As you can see PF0 has only 4 bits, PF1 has 8-bits and PF2 also 8-bits. So if a bit is 1 (ON) it will show white and when it's 0 (OFF), it shows black.
+
+__REFLECT__ : if it is 0 so the PF0, PF1 and PF2 are going to be REPEATED, but if it is 1 , the PF0, PF1 and PF2 are going to be reflected.
+
+#### Bit Orders:
+* PF0 : From right to left
+* PF1 : From left to right (reversed)
+* PF2 : From right to left
+* EXAMPLES of setting the bits of PF0, PF1 and PF2 in the video from 09:58 to 13:40
+___
+
+### 5.1.3. Player
+* Each is an independent 8-bit pattern (GRP0, GRP1) with a foreground color (COLUP0, COLUP1) that can be positioned at any column of the scanline.
+
+* Each player can be horizontally stretched, multiplied or inverted.
+    * NUSIZ0, NUSIZ1 (number/size)
+    * REFP0, REFP1 (reflect player)
+___
+
+## 5.2. Players, Missiles, and Balls
+## 5.3. Playfield
+## 5.4. Playfield (Exercise)
+## 5.5. Player Bitmap and Scoreboard
+## 5.6. Playfield Color
+## 5.7. Declaring Variable Names
+___
+___
+___
