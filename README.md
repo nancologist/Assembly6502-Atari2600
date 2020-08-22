@@ -844,7 +844,7 @@ REMEMBER: _Atari always starts at the $FFFC of ROM !!!_
 
 1. To make our file easier we are going to create a file ``Makefile`` (without any extension! and it should be called exactly "Makefile"!!!)  with the commands we need
 
-2. Now we can use the command ``make`` this runs the "$ make all" for us and it compiles our code in ``colorbg.asm`` into machine code with the filename ``cart.bin``
+2. Now we can use the command ``make`` this runs the "$ make all" for us and it compiles our code ``colorbg.asm`` into machine code with the filename ``cart.bin``
 
 ERROR: But now if your run this cart.bin with Stella you see scrolling white colors on BG! for that we should: ``Options > Game Properties > Emulation > TV Format > NTCS``
 
@@ -892,7 +892,7 @@ ___
     * PF0, PF1, PF2
     * COLUPF
     * CTRLPF 
-        * D0: Reflect (Most right bit)
+        * D0: Reflection if it is 1, Repeat if it is 0 (Most right bit)
         * D1: Score
         * D2: Priority (like z-index in CSS!)
         * D4-D5: Ball Size (1, 2, 4, 8)
@@ -939,6 +939,9 @@ ___
 ___
 
 ## 5.3. Playfield
+* ``REPEAT num ... REPEND`` : what comes between these two, while be repeated ``num`` times.
+___
+
 ## 5.4. Playfield (Exercise)
 ## 5.5. Player Bitmap and Scoreboard
 ## 5.6. Playfield Color
