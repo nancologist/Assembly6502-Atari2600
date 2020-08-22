@@ -943,6 +943,8 @@ ___
 ___
 
 ## 5.4. Playfield (Exercise)
+___
+
 ## 5.5. Player Bitmap and Scoreboard
 ## 5.6. Playfield Color
 ## 5.7. Declaring Variable Names
