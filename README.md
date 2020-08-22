@@ -916,7 +916,9 @@ __REFLECT__ : if it is 0 so the PF0, PF1 and PF2 are going to be REPEATED, but i
 * EXAMPLES of setting the bits of PF0, PF1 and PF2 in the video from 09:58 to 13:40
 ___
 
-### 5.1.3. Player
+## 5.2. Players, Missiles, and Balls
+
+### 5.2.1. Player
 * Each is an independent 8-bit pattern (GRP0, GRP1) with a foreground color (COLUP0, COLUP1) that can be positioned at any column of the scanline.
 
 * Each player can be horizontally stretched, multiplied or inverted.
@@ -924,7 +926,18 @@ ___
     * REFP0, REFP1 (reflect player)
 ___
 
-## 5.2. Players, Missiles, and Balls
+### 5.2.2. Missiles / Ball
+* Can be positioned just like players, but no bit pattern.
+* Just one pixel, but it can be horizontally stretched (2x, 4x, 8x)
+* M0 (missile) and M1 use P0/P1 colors
+* BL (ball) uses the PF foreground color
+* We have a limitation of up to 2 missiles only on the same horizontal space.
+___
+
+### What we want to achieve:
+![Our Goal](./images/our-playfield.png)
+___
+
 ## 5.3. Playfield
 ## 5.4. Playfield (Exercise)
 ## 5.5. Player Bitmap and Scoreboard
