@@ -950,6 +950,11 @@ ___
 ___
 
 ## 5.6. Playfield Color
+We want to have the Score (Playfield) at the side of each Player in the color of them. So the score result of green player should be green and the scores of red player should be in red. We can do that with ``CTRLPF`` (Control Playfield).
+
+So it even changes not the Score but also Arena which is also part of the Playfield (PF), the LEFT SIDE to the color of PLAYER0 and the RIGHT SIDE to the color of PLAYER1
+___
+
 ## 5.7. Declaring Variable Names
 ___
 ___

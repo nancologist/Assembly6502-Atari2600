@@ -17,6 +17,10 @@ Reset:
     lda #%1111           ; #$1C yellow for playfield color OR set it to #%1111 for white.
     sta COLUPF
 
+    ; Set CTRLPF D1 to 1 means SCORE
+    ldy #%00000010
+    sty CTRLPF
+
 ;; Set the TIA registers for the color of Player0 and Player1:
     lda #$48
     sta COLUP0          ; light red for Player0
@@ -111,6 +115,15 @@ Player1Loop:
     REPEAT 102
         sta WSYNC
     REPEND
+
+    ; Mori: My Own Experiment
+    ; lda #%00110000
+    ; sta PF0
+    ; sta WSYNC
+    ; sta WSYNC
+    ; sta WSYNC
+    ; lda #0
+    ; sta PF0
 
 ;; Output 30 more VBLANK overscan lines to compelete our frame
     REPEAT 30
