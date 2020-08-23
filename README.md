@@ -956,6 +956,11 @@ So it even changes not the Score but also Arena which is also part of the Playfi
 ___
 
 ## 5.7. Declaring Variable Names
+How we can define variables? We give the memory addresses some alias names so we can reuse them! just like the aliases which we use throughout the course from ``vcs.h`` , but we want to define our own inside the code.
+
+* ``ds num`` : Define Space by ``num`` bytes.
+
+__We usually start to declaring our variables at ``$80``
 ___
 ___
 ___

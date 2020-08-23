@@ -4,6 +4,13 @@
     include "vcs.h"
     include "macro.h"
 
+;; Start a unitilized segment at $80 for variable declaration
+    seg.u MyVars
+    org $80
+    ; Declare variables:
+    P0Height ds 1       ; Define 1 Byte for Player0's Height
+    P1Height ds 1       ; Define 1 Byte for Player1's Height
+
 ;; Start ROM code
     seg
     org $f000
@@ -20,6 +27,11 @@ Reset:
     ; Set CTRLPF D1 to 1 means SCORE
     ldy #%00000010
     sty CTRLPF
+
+    ; Assigning the value 10 to our variables
+    lda #10
+    sta P0Height
+    sta P1Height
 
 ;; Set the TIA registers for the color of Player0 and Player1:
     lda #$48
@@ -87,7 +99,7 @@ Player0Loop:
     sta GRP0        ; Draw Player0 (GRP0: Graphical Player 0)
     sta WSYNC
     iny
-    cpy #10
+    cpy P0Height
     bne Player0Loop
 
     lda #0
@@ -101,7 +113,7 @@ Player1Loop:
     sta GRP1        ; Draw Player0 (GRP0: Graphical Player 1)
     sta WSYNC
     iny
-    cpy #10
+    cpy P1Height
     bne Player1Loop
 
     lda #0
