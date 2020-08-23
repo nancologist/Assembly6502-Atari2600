@@ -77,8 +77,8 @@ ScoreboardLoop:
 
     ; Display 10 Scanlines for the Player 0 graphics.
     ; (Pull data from an array of bits defined at PlayerBitmap.)
-Player0Loop:
     ldy #0
+Player0Loop:
     lda PlayerBitmap,Y
     sta GRP0        ; Draw Player0 (GRP0: Graphical Player 0)
     sta WSYNC
@@ -91,8 +91,8 @@ Player0Loop:
 
     ; Display 10 Scanlines for the Player 1 graphics.
     ; (Pull data from an array of bits defined at PlayerBitmap.)
-Player1Loop:
     ldy #0
+Player1Loop:
     lda PlayerBitmap,Y
     sta GRP1        ; Draw Player0 (GRP0: Graphical Player 1)
     sta WSYNC
