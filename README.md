@@ -946,6 +946,9 @@ ___
 ___
 
 ## 5.5. Player Bitmap and Scoreboard
+* ``cpy #10`` : This compares the value of Y-register with the number (in our case here 10) and if they are same it sets the Zero-flag.
+___
+
 ## 5.6. Playfield Color
 ## 5.7. Declaring Variable Names
 ___
