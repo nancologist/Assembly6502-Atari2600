@@ -98,7 +98,7 @@ Player1Loop:
     sta WSYNC
     iny
     cpy #10
-    bne Player0Loop
+    bne Player1Loop
 
     lda #0
     sta GRP1         ; Disable applied Bitmap to the Player 1
