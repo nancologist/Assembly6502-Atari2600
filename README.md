@@ -964,3 +964,12 @@ __We usually start to declaring our variables at ``$80``
 ___
 ___
 ___
+
+# 6. Horizontal and Vertical Positioning
+## 6.1. Vertical Positioning
+## 6.2. Implementing Vertical Position
+## 6.3. Horizontal Positioning
+## 6.4. Implementing Horizontal Positioning
+## 6.5. Horizontal Position (Exercise)
+## 6.6. Horizontal Position (Solution)
+## 6.7. A Deeper Look into Horizontal Positioning
